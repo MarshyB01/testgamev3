@@ -90,11 +90,11 @@
 [ext_resource type="PackedScene" uid="uid://ypw702finfoq" path="res://scenes/euler.tscn" id="81_veukt"]
 [ext_resource type="Texture2D" uid="uid://p22jou11xefi" path="res://imgs/finalbuild1.png" id="83_xbifu"]
 [ext_resource type="PackedScene" uid="uid://bu8uak74g1b2s" path="res://scenes/checkpoint.tscn" id="89_nbjts"]
-[ext_resource type="AudioStream" uid="uid://uhfdfdnilo3p" path="res://assets/music/music-20260117T042655Z-1-001/music/Ancient Greek Music Vol.1 _ Spirit Of Aristotle.mp3" id="90_gdf8r"]
+[ext_resource type="AudioStream" uid="uid://bp3f4j4tlx818" path="res://assets/music/music-20260117T042655Z-1-001/music/Ancient Greek Music Vol.1 _ Spirit Of Aristotle-[AudioTrimmer.com].mp3" id="90_xbifu"]
 [ext_resource type="Script" uid="uid://bmgwfl6uim2bq" path="res://scripts/level_1_zone (2).gd" id="91_x8trd"]
-[ext_resource type="AudioStream" uid="uid://coekkgqpvy6ht" path="res://assets/music/music-20260117T042655Z-1-001/music/Classical Indian Music.mp3" id="92_s33c4"]
+[ext_resource type="AudioStream" uid="uid://dur761jfao58r" path="res://assets/music/music-20260117T042655Z-1-001/music/Classical Indian Music-[AudioTrimmer.com].mp3" id="92_gdf8r"]
 [ext_resource type="Script" uid="uid://dmesbjbrddpx4" path="res://scripts/level_1_zone (3).gd" id="93_3hv4c"]
-[ext_resource type="AudioStream" uid="uid://u5578uktxhrl" path="res://assets/music/music-20260117T042655Z-1-001/music/16-17th century Late Renaissance Music & Early Baroque Music [Praetorius _ Brade _ Earle _ Holborne].mp3" id="94_vniw0"]
+[ext_resource type="AudioStream" uid="uid://dxp6i3tfwhaik" path="res://assets/music/music-20260117T042655Z-1-001/music/16-17th century Late Renaissance Music & Early Baroque Music [Praetorius _ Brade _ Earle _ Holborne]-[AudioTrimmer.com].mp3" id="94_x8trd"]
 [ext_resource type="Script" uid="uid://dl5jfdnxstr04" path="res://scripts/level_1_zone (4).gd" id="95_lddog"]
 [ext_resource type="AudioStream" uid="uid://bt1criuwgnjvl" path="res://assets/music/music-20260117T042655Z-1-001/music/Thomas Arne - Artaxerxes - Ouverture.mp3" id="96_boxkr"]
 [ext_resource type="Script" uid="uid://7urj5boxqcjt" path="res://scripts/level_1_zone (5).gd" id="97_de5we"]
@@ -19509,7 +19509,7 @@ position = Vector2(25335, 22)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("29_suyxu")
-music_stream = ExtResource("90_gdf8r")
+music_stream = ExtResource("90_xbifu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MusicZones/Level1Zone"]
 position = Vector2(1448, -37)
@@ -19519,7 +19519,7 @@ shape = SubResource("RectangleShape2D_sgl2t")
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("91_x8trd")
-music_stream = ExtResource("92_s33c4")
+music_stream = ExtResource("92_gdf8r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MusicZones/Level2Zone"]
 position = Vector2(3953.25, -39)
@@ -19529,7 +19529,7 @@ shape = SubResource("RectangleShape2D_473mq")
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("93_3hv4c")
-music_stream = ExtResource("94_vniw0")
+music_stream = ExtResource("94_x8trd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MusicZones/Level3Zone"]
 position = Vector2(10053.5, -39.5)

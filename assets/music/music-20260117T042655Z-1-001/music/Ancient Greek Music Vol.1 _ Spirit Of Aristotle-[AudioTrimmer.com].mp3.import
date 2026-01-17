@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bp3f4j4tlx818"
+path="res://.godot/imported/Ancient Greek Music Vol.1 _ Spirit Of Aristotle-[AudioTrimmer.com].mp3-28218c3392cdd51b51a8101495324232.mp3str"
+
+[deps]
+
+source_file="res://assets/music/music-20260117T042655Z-1-001/music/Ancient Greek Music Vol.1 _ Spirit Of Aristotle-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/Ancient Greek Music Vol.1 _ Spirit Of Aristotle-[AudioTrimmer.com].mp3-28218c3392cdd51b51a8101495324232.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
