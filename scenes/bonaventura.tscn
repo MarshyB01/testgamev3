@@ -1,0 +1,106 @@
+[gd_scene load_steps=18 format=3 uid="uid://b22x8jcxc6hh7"]
+
+[ext_resource type="Texture2D" uid="uid://do8bn3vu6ad88" path="res://assets/sprites/Bonaventura.png" id="1_whmty"]
+[ext_resource type="Script" uid="uid://b3io5o0vsbgop" path="res://scripts/bonaventura_talkzone.gd" id="2_qut8c"]
+[ext_resource type="Texture2D" uid="uid://bwa1ror0rb0p" path="res://imgs/bona4.png" id="3_adk44"]
+[ext_resource type="Texture2D" uid="uid://b33mus0bfja8l" path="res://imgs/bona1.png" id="4_21sqw"]
+[ext_resource type="Texture2D" uid="uid://d080faqigtmbs" path="res://imgs/bona2.png" id="5_gxlmo"]
+
+[sub_resource type="GDScript" id="GDScript_b0wga"]
+script/source = "extends Node2D
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qut8c"]
+atlas = ExtResource("1_whmty")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sie43"]
+atlas = ExtResource("1_whmty")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adk44"]
+atlas = ExtResource("1_whmty")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21sqw"]
+atlas = ExtResource("1_whmty")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxlmo"]
+atlas = ExtResource("1_whmty")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqi5n"]
+atlas = ExtResource("1_whmty")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhr7n"]
+atlas = ExtResource("1_whmty")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvgrr"]
+atlas = ExtResource("1_whmty")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5h3lh"]
+atlas = ExtResource("1_whmty")
+region = Rect2(768, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hctsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qut8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sie43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adk44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21sqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxlmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqi5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhr7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvgrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5h3lh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wakea"]
+size = Vector2(27, 109)
+
+[node name="Bonaventura" type="Node2D"]
+script = SubResource("GDScript_b0wga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -7)
+sprite_frames = SubResource("SpriteFrames_hctsb")
+autoplay = "default"
+frame = 2
+frame_progress = 0.7271484
+flip_h = true
+
+[node name="BonaventuraTalkzone" type="Area2D" parent="AnimatedSprite2D"]
+collision_mask = 2
+script = ExtResource("2_qut8c")
+npc_anim_path = NodePath("..")
+image_pages = Array[Texture2D]([ExtResource("3_adk44"), ExtResource("4_21sqw"), ExtResource("5_gxlmo")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/BonaventuraTalkzone"]
+position = Vector2(-2.5, -46.5)
+shape = SubResource("RectangleShape2D_wakea")

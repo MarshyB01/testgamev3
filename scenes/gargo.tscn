@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://cf3jb0bxymlv6"]
+
+[ext_resource type="Texture2D" uid="uid://doj6hvkkoxg1p" path="res://assets/sprites/2D-Fantasy-Gargoyle-Character-Sprites5-removebg-preview-1.png.png" id="1_ysv8o"]
+[ext_resource type="PackedScene" uid="uid://bhlwbkxx51hai" path="res://scenes/killzone.tscn" id="2_g7vje"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7vje"]
+atlas = ExtResource("1_ysv8o")
+region = Rect2(120, 114, 85, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mccrh"]
+atlas = ExtResource("1_ysv8o")
+region = Rect2(205, 114, 85, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ednpy"]
+atlas = ExtResource("1_ysv8o")
+region = Rect2(290, 114, 85, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0ltq"]
+atlas = ExtResource("1_ysv8o")
+region = Rect2(375, 114, 85, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75brh"]
+atlas = ExtResource("1_ysv8o")
+region = Rect2(460, 114, 85, 57)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_107id"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7vje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mccrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ednpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0ltq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75brh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjba3"]
+size = Vector2(38, 51)
+
+[node name="Gargol" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-9, -18)
+sprite_frames = SubResource("SpriteFrames_107id")
+autoplay = "default"
+flip_h = true
+
+[node name="Killzone" parent="Sprite2D" instance=ExtResource("2_g7vje")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Killzone"]
+position = Vector2(10, 1.5)
+shape = SubResource("RectangleShape2D_xjba3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -617)
+shape = SubResource("RectangleShape2D_xjba3")

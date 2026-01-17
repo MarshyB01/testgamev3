@@ -1,0 +1,105 @@
+[gd_scene load_steps=19 format=3 uid="uid://8623kyob4xs6"]
+
+[ext_resource type="Texture2D" uid="uid://ddhywdj5bal7c" path="res://assets/sprites/newtob.png" id="1_h8wp3"]
+[ext_resource type="Script" uid="uid://btm2oxdmpkus" path="res://scripts/jacob_talkzone.gd" id="2_h8wp3"]
+[ext_resource type="Texture2D" uid="uid://bh30nvrsq5gsl" path="res://imgs/jakob1.png" id="3_0hjdr"]
+[ext_resource type="Texture2D" uid="uid://dso8vj0o3kx43" path="res://imgs/jakob2.png" id="4_2j5lq"]
+[ext_resource type="Texture2D" uid="uid://djkl7o668axv3" path="res://imgs/jakob3.jpg" id="5_iio8w"]
+[ext_resource type="Texture2D" uid="uid://buy2k14rknx38" path="res://imgs/jakob4.jpg" id="6_iya2w"]
+
+[sub_resource type="GDScript" id="GDScript_b0wga"]
+script/source = "extends Node2D
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4at37"]
+atlas = ExtResource("1_h8wp3")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldstl"]
+atlas = ExtResource("1_h8wp3")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6p83"]
+atlas = ExtResource("1_h8wp3")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3lo3"]
+atlas = ExtResource("1_h8wp3")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4bjs"]
+atlas = ExtResource("1_h8wp3")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dm1w"]
+atlas = ExtResource("1_h8wp3")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al16u"]
+atlas = ExtResource("1_h8wp3")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rbyg"]
+atlas = ExtResource("1_h8wp3")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wo5rh"]
+atlas = ExtResource("1_h8wp3")
+region = Rect2(768, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hctsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4at37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldstl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6p83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3lo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4bjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dm1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_al16u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rbyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wo5rh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wakea"]
+size = Vector2(27, 109)
+
+[node name="Jacob Bernoulli" type="Node2D"]
+script = SubResource("GDScript_b0wga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -7)
+sprite_frames = SubResource("SpriteFrames_hctsb")
+autoplay = "default"
+flip_h = true
+
+[node name="JacobTalkzone" type="Area2D" parent="AnimatedSprite2D"]
+collision_mask = 2
+script = ExtResource("2_h8wp3")
+npc_anim_path = NodePath("..")
+image_pages = Array[Texture2D]([ExtResource("3_0hjdr"), ExtResource("4_2j5lq"), ExtResource("5_iio8w"), ExtResource("6_iya2w")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/JacobTalkzone"]
+position = Vector2(-2.5, -46.5)
+shape = SubResource("RectangleShape2D_wakea")

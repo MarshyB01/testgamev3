@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dciglygdq7b6l"]
+
+[ext_resource type="Texture2D" uid="uid://dd7ach0kwviv2" path="res://assets/sprites/Kobold Priest Sprite Sheet.png" id="1_7stdb"]
+[ext_resource type="PackedScene" uid="uid://bhlwbkxx51hai" path="res://scenes/killzone.tscn" id="2_kjm0v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1qgh"]
+atlas = ExtResource("1_7stdb")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_107id"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1qgh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjba3"]
+size = Vector2(6, 10)
+
+[node name="BasaliskProjectile" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_107id")
+autoplay = "default"
+flip_h = true
+
+[node name="Killzone" parent="Sprite2D" instance=ExtResource("2_kjm0v")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Killzone"]
+position = Vector2(9, 8)
+shape = SubResource("RectangleShape2D_xjba3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(576, 523)
+shape = SubResource("RectangleShape2D_xjba3")

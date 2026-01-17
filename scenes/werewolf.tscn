@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://bfh2m8xj66haf"]
+
+[ext_resource type="Script" uid="uid://b7b7sjbw04m3u" path="res://scripts/gorgan.gd" id="1_xnj5n"]
+[ext_resource type="Texture2D" uid="uid://brphbqap7ocsi" path="res://assets/sprites/Run+Attack.png" id="2_xnj5n"]
+[ext_resource type="PackedScene" uid="uid://bhlwbkxx51hai" path="res://scenes/killzone.tscn" id="3_f33fu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pxq0"]
+atlas = ExtResource("2_xnj5n")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f33fu"]
+atlas = ExtResource("2_xnj5n")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gd88l"]
+atlas = ExtResource("2_xnj5n")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn1el"]
+atlas = ExtResource("2_xnj5n")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tkjo"]
+atlas = ExtResource("2_xnj5n")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h6g2"]
+atlas = ExtResource("2_xnj5n")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_typhl"]
+atlas = ExtResource("2_xnj5n")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sgk8c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pxq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f33fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gd88l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kn1el")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tkjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3h6g2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_typhl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7idw8"]
+size = Vector2(4.0000014, 3.7142868)
+
+[node name="werewolf" type="Node2D"]
+script = ExtResource("1_xnj5n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -23)
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_sgk8c")
+autoplay = "default"
+
+[node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("3_f33fu")]
+position = Vector2(-1.1920928e-06, 219.99998)
+scale = Vector2(19.999998, 19.999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
+position = Vector2(0, -9.571429)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_7idw8")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(22, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(-18, 0)

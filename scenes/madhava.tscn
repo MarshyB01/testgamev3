@@ -1,0 +1,105 @@
+[gd_scene load_steps=18 format=3 uid="uid://cjkbarm2yy8l"]
+
+[ext_resource type="Texture2D" uid="uid://dcs02lvp1wha2" path="res://assets/sprites/madhavasprite.png" id="1_tt7pl"]
+[ext_resource type="Script" uid="uid://chawvgoyqsuei" path="res://scripts/madhava_talkzone.gd" id="2_cawvf"]
+[ext_resource type="Texture2D" uid="uid://dgjjmg5dftsw6" path="res://imgs/madh2.jpg" id="3_7x1wx"]
+[ext_resource type="Texture2D" uid="uid://dpcaovovlee22" path="res://imgs/madh1.jpg" id="4_o3bvq"]
+[ext_resource type="Texture2D" uid="uid://b5jwtk82k3jd" path="res://imgs/madh3.png" id="5_26wa4"]
+
+[sub_resource type="GDScript" id="GDScript_b0wga"]
+script/source = "extends Node2D
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omiif"]
+atlas = ExtResource("1_tt7pl")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7x1wx"]
+atlas = ExtResource("1_tt7pl")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3bvq"]
+atlas = ExtResource("1_tt7pl")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26wa4"]
+atlas = ExtResource("1_tt7pl")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pfgt"]
+atlas = ExtResource("1_tt7pl")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr4nf"]
+atlas = ExtResource("1_tt7pl")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2cek"]
+atlas = ExtResource("1_tt7pl")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f31v6"]
+atlas = ExtResource("1_tt7pl")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lu182"]
+atlas = ExtResource("1_tt7pl")
+region = Rect2(768, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hctsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omiif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7x1wx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3bvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26wa4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pfgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr4nf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2cek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f31v6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lu182")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wakea"]
+size = Vector2(27, 109)
+
+[node name="Madhava" type="Node2D"]
+script = SubResource("GDScript_b0wga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -7)
+sprite_frames = SubResource("SpriteFrames_hctsb")
+autoplay = "default"
+frame_progress = 0.62949055
+flip_h = true
+
+[node name="MadhavaTalkzone" type="Area2D" parent="AnimatedSprite2D"]
+collision_mask = 2
+script = ExtResource("2_cawvf")
+npc_anim_path = NodePath("..")
+image_pages = Array[Texture2D]([ExtResource("3_7x1wx"), ExtResource("4_o3bvq"), ExtResource("5_26wa4")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/MadhavaTalkzone"]
+position = Vector2(-2.5, -46.5)
+shape = SubResource("RectangleShape2D_wakea")

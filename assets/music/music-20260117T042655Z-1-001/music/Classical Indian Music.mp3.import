@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coekkgqpvy6ht"
+path="res://.godot/imported/Classical Indian Music.mp3-245fccf41d1f7b8d982779712bf2fbd6.mp3str"
+
+[deps]
+
+source_file="res://assets/music/music-20260117T042655Z-1-001/music/Classical Indian Music.mp3"
+dest_files=["res://.godot/imported/Classical Indian Music.mp3-245fccf41d1f7b8d982779712bf2fbd6.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

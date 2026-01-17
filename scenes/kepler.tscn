@@ -1,0 +1,105 @@
+[gd_scene load_steps=18 format=3 uid="uid://dd5focfwj2iys"]
+
+[ext_resource type="Texture2D" uid="uid://pwp725wfkdpp" path="res://assets/sprites/kepler.png" id="1_vyc3t"]
+[ext_resource type="Script" uid="uid://dyy22ktbu5phs" path="res://scripts/kepler_talk_zone.gd" id="2_pofmr"]
+[ext_resource type="Texture2D" uid="uid://ctxqp6k6vfsfr" path="res://imgs/kep1.png" id="3_454bs"]
+[ext_resource type="Texture2D" uid="uid://c5785pbmgqe4v" path="res://imgs/kep2.jpg" id="4_kvr7r"]
+[ext_resource type="Texture2D" uid="uid://d3x6dxb1pwbfl" path="res://imgs/kep3.jpg" id="5_8dwdc"]
+
+[sub_resource type="GDScript" id="GDScript_b0wga"]
+script/source = "extends Node2D
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pofmr"]
+atlas = ExtResource("1_vyc3t")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3272p"]
+atlas = ExtResource("1_vyc3t")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23o40"]
+atlas = ExtResource("1_vyc3t")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_454bs"]
+atlas = ExtResource("1_vyc3t")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvr7r"]
+atlas = ExtResource("1_vyc3t")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dwdc"]
+atlas = ExtResource("1_vyc3t")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iklev"]
+atlas = ExtResource("1_vyc3t")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fr7g"]
+atlas = ExtResource("1_vyc3t")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iap05"]
+atlas = ExtResource("1_vyc3t")
+region = Rect2(768, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hctsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pofmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3272p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23o40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_454bs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvr7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dwdc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iklev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fr7g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iap05")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wakea"]
+size = Vector2(27, 109)
+
+[node name="Kepler" type="Node2D"]
+script = SubResource("GDScript_b0wga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -7)
+sprite_frames = SubResource("SpriteFrames_hctsb")
+autoplay = "default"
+frame_progress = 0.21315248
+flip_h = true
+
+[node name="KeplerTalkZone" type="Area2D" parent="AnimatedSprite2D"]
+collision_mask = 2
+script = ExtResource("2_pofmr")
+npc_anim_path = NodePath("..")
+image_pages = Array[Texture2D]([ExtResource("3_454bs"), ExtResource("4_kvr7r"), ExtResource("5_8dwdc")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/KeplerTalkZone"]
+position = Vector2(-2.5, -46.5)
+shape = SubResource("RectangleShape2D_wakea")

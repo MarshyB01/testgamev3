@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://chcb061x7hi7y"]
+
+[node name="DialogueUI" type="CanvasLayer"]
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DiaolguePanel" type="Panel" parent="Root"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBox" type="HBoxContainer" parent="Root/DiaolguePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Portrait" type="TextureRect" parent="Root/DiaolguePanel/HBox"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+stretch_mode = 5
+
+[node name="TextArea" type="MarginContainer" parent="Root/DiaolguePanel/HBox"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/DiaolguePanel/HBox/TextArea"]
+layout_mode = 2
+
+[node name="DialogueText" type="RichTextLabel" parent="Root/DiaolguePanel/HBox/TextArea/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+
+[node name="HintLabel" type="Label" parent="Root/DiaolguePanel/HBox/TextArea/VBoxContainer"]
+layout_mode = 2
+text = "Press Enter"
+horizontal_alignment = 2
+vertical_alignment = 2

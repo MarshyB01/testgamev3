@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dne2veqmt5kdw"
+path="res://.godot/imported/#晚风心里吹   世间无尽放任，与沧海未尽缘分 #粤语歌 #张国荣.mp3-e474a8fef19c6a6d4af4e046d0662f0c.mp3str"
+
+[deps]
+
+source_file="res://assets/music/#晚风心里吹   世间无尽放任，与沧海未尽缘分 #粤语歌 #张国荣.mp3"
+dest_files=["res://.godot/imported/#晚风心里吹   世间无尽放任，与沧海未尽缘分 #粤语歌 #张国荣.mp3-e474a8fef19c6a6d4af4e046d0662f0c.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

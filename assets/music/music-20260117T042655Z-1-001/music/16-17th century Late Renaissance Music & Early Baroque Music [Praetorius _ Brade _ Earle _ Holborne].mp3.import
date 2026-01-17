@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://u5578uktxhrl"
+path="res://.godot/imported/16-17th century Late Renaissance Music & Early Baroque Music [Praetorius _ Brade _ Earle _ Holborne].mp3-4c4f43cb39d907fd4f000d2cea038699.mp3str"
+
+[deps]
+
+source_file="res://assets/music/music-20260117T042655Z-1-001/music/16-17th century Late Renaissance Music & Early Baroque Music [Praetorius _ Brade _ Earle _ Holborne].mp3"
+dest_files=["res://.godot/imported/16-17th century Late Renaissance Music & Early Baroque Music [Praetorius _ Brade _ Earle _ Holborne].mp3-4c4f43cb39d907fd4f000d2cea038699.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

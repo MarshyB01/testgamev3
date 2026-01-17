@@ -1,0 +1,105 @@
+[gd_scene load_steps=18 format=3 uid="uid://bx5pttow1r0qb"]
+
+[ext_resource type="Texture2D" uid="uid://b7dpx8s7xok0t" path="res://assets/sprites/pierre.png" id="1_ch06q"]
+[ext_resource type="Script" uid="uid://dxy850sjhc584" path="res://scripts/pierre_talkzone.gd" id="2_ch06q"]
+[ext_resource type="Texture2D" uid="uid://bf4drt63huk0a" path="res://imgs/fermat1.png" id="3_ex2je"]
+[ext_resource type="Texture2D" uid="uid://c5q3gavv7e4bx" path="res://imgs/fermat2.jpg" id="4_o8g8m"]
+[ext_resource type="Texture2D" uid="uid://mjtj0btnlf0a" path="res://imgs/fermat3.jpg" id="5_kf6ep"]
+
+[sub_resource type="GDScript" id="GDScript_b0wga"]
+script/source = "extends Node2D
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xj8o"]
+atlas = ExtResource("1_ch06q")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjue1"]
+atlas = ExtResource("1_ch06q")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ex2je"]
+atlas = ExtResource("1_ch06q")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8g8m"]
+atlas = ExtResource("1_ch06q")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kf6ep"]
+atlas = ExtResource("1_ch06q")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvmwm"]
+atlas = ExtResource("1_ch06q")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arrqo"]
+atlas = ExtResource("1_ch06q")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38yf3"]
+atlas = ExtResource("1_ch06q")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edb21"]
+atlas = ExtResource("1_ch06q")
+region = Rect2(768, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hctsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xj8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjue1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ex2je")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8g8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kf6ep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvmwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arrqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38yf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edb21")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wakea"]
+size = Vector2(27, 109)
+
+[node name="Pierre" type="Node2D"]
+script = SubResource("GDScript_b0wga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -7)
+sprite_frames = SubResource("SpriteFrames_hctsb")
+autoplay = "default"
+frame_progress = 0.24462917
+flip_h = true
+
+[node name="PierreTalkzone" type="Area2D" parent="AnimatedSprite2D"]
+collision_mask = 2
+script = ExtResource("2_ch06q")
+npc_anim_path = NodePath("..")
+image_pages = Array[Texture2D]([ExtResource("3_ex2je"), ExtResource("4_o8g8m"), ExtResource("5_kf6ep")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/PierreTalkzone"]
+position = Vector2(-2.5, -46.5)
+shape = SubResource("RectangleShape2D_wakea")

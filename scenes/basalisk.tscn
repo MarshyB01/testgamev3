@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=3 uid="uid://deinssxk6s0kk"]
+
+[ext_resource type="Texture2D" uid="uid://fkowpeib8oof" path="res://assets/sprites/a797e44d-070b-46e1-85c5-22c9c1641112.png" id="2_361a7"]
+[ext_resource type="PackedScene" uid="uid://bhlwbkxx51hai" path="res://scenes/killzone.tscn" id="3_3mf16"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uobb"]
+atlas = ExtResource("2_361a7")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mf16"]
+atlas = ExtResource("2_361a7")
+region = Rect2(0, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5po0t"]
+atlas = ExtResource("2_361a7")
+region = Rect2(0, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vavno"]
+atlas = ExtResource("2_361a7")
+region = Rect2(0, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yitob"]
+atlas = ExtResource("2_361a7")
+region = Rect2(0, 320, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sgk8c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2uobb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mf16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5po0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vavno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yitob")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7idw8"]
+size = Vector2(3.214287, 2.3571434)
+
+[node name="basalisk" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -16)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_sgk8c")
+autoplay = "default"
+frame_progress = 0.68137455
+flip_h = true
+
+[node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("3_3mf16")]
+position = Vector2(-1.1920928e-06, 219.99998)
+scale = Vector2(19.999998, 19.999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
+position = Vector2(-0.10714275, -11.035715)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_7idw8")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(8, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(-9, 0)

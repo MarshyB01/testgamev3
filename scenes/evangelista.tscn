@@ -1,0 +1,105 @@
+[gd_scene load_steps=18 format=3 uid="uid://dly7fjgwy0uk4"]
+
+[ext_resource type="Texture2D" uid="uid://bw5l447w3kgw" path="res://assets/sprites/Evangelista.png" id="1_8uynq"]
+[ext_resource type="Script" uid="uid://cxpawnht4lxav" path="res://scripts/evangelista_talk_zone.gd" id="2_8uynq"]
+[ext_resource type="Texture2D" uid="uid://bjt4rs6qvgdjv" path="res://imgs/torri1.png" id="3_7uhfu"]
+[ext_resource type="Texture2D" uid="uid://bk6jv4ywkq1u1" path="res://imgs/torri2.jpg" id="4_o5vgx"]
+[ext_resource type="Texture2D" uid="uid://bi0qap4xqjl6i" path="res://imgs/torri3.jpg" id="5_r1jue"]
+
+[sub_resource type="GDScript" id="GDScript_b0wga"]
+script/source = "extends Node2D
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5cyy"]
+atlas = ExtResource("1_8uynq")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5mth"]
+atlas = ExtResource("1_8uynq")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uhfu"]
+atlas = ExtResource("1_8uynq")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5vgx"]
+atlas = ExtResource("1_8uynq")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1jue"]
+atlas = ExtResource("1_8uynq")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ln8f"]
+atlas = ExtResource("1_8uynq")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f32qk"]
+atlas = ExtResource("1_8uynq")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvvdg"]
+atlas = ExtResource("1_8uynq")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7qpj"]
+atlas = ExtResource("1_8uynq")
+region = Rect2(768, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hctsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5cyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5mth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uhfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5vgx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1jue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ln8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f32qk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvvdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7qpj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wakea"]
+size = Vector2(27, 109)
+
+[node name="Evangelista" type="Node2D"]
+script = SubResource("GDScript_b0wga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -7)
+sprite_frames = SubResource("SpriteFrames_hctsb")
+autoplay = "default"
+frame_progress = 0.5079674
+flip_h = true
+
+[node name="EvangelistaTalkZone" type="Area2D" parent="AnimatedSprite2D"]
+collision_mask = 2
+script = ExtResource("2_8uynq")
+npc_anim_path = NodePath("..")
+image_pages = Array[Texture2D]([ExtResource("3_7uhfu"), ExtResource("4_o5vgx"), ExtResource("5_r1jue")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/EvangelistaTalkZone"]
+position = Vector2(-2.5, -46.5)
+shape = SubResource("RectangleShape2D_wakea")

@@ -1,0 +1,105 @@
+[gd_scene load_steps=19 format=3 uid="uid://6l47d4f2dkey"]
+
+[ext_resource type="Texture2D" uid="uid://ddhywdj5bal7c" path="res://assets/sprites/newtob.png" id="1_udmfj"]
+[ext_resource type="Script" uid="uid://b8l5pyrrp0ubn" path="res://scripts/newton_talkzone.gd" id="2_udmfj"]
+[ext_resource type="Texture2D" uid="uid://cln78eenyp715" path="res://imgs/newt4.png" id="3_s3lo3"]
+[ext_resource type="Texture2D" uid="uid://crahl8vtpdi4c" path="res://imgs/newt2.jpg" id="4_b4bjs"]
+[ext_resource type="Texture2D" uid="uid://c2glcaxkldoyp" path="res://imgs/newt5.png" id="5_3dm1w"]
+[ext_resource type="Texture2D" uid="uid://tceyb6dvtgid" path="res://imgs/newt3.jpg" id="6_al16u"]
+
+[sub_resource type="GDScript" id="GDScript_b0wga"]
+script/source = "extends Node2D
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4at37"]
+atlas = ExtResource("1_udmfj")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldstl"]
+atlas = ExtResource("1_udmfj")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6p83"]
+atlas = ExtResource("1_udmfj")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3lo3"]
+atlas = ExtResource("1_udmfj")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4bjs"]
+atlas = ExtResource("1_udmfj")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dm1w"]
+atlas = ExtResource("1_udmfj")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al16u"]
+atlas = ExtResource("1_udmfj")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rbyg"]
+atlas = ExtResource("1_udmfj")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wo5rh"]
+atlas = ExtResource("1_udmfj")
+region = Rect2(768, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hctsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4at37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldstl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6p83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3lo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4bjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dm1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_al16u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rbyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wo5rh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wakea"]
+size = Vector2(27, 109)
+
+[node name="Newton" type="Node2D"]
+script = SubResource("GDScript_b0wga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -7)
+sprite_frames = SubResource("SpriteFrames_hctsb")
+autoplay = "default"
+flip_h = true
+
+[node name="NewtonTalkzone" type="Area2D" parent="AnimatedSprite2D"]
+collision_mask = 2
+script = ExtResource("2_udmfj")
+npc_anim_path = NodePath("..")
+image_pages = Array[Texture2D]([ExtResource("3_s3lo3"), ExtResource("4_b4bjs"), ExtResource("5_3dm1w"), ExtResource("6_al16u")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/NewtonTalkzone"]
+position = Vector2(-2.5, -46.5)
+shape = SubResource("RectangleShape2D_wakea")

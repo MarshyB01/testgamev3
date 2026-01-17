@@ -1,0 +1,105 @@
+[gd_scene load_steps=18 format=3 uid="uid://cyilw5ejwfwks"]
+
+[ext_resource type="Texture2D" uid="uid://yft2u16dwpjy" path="res://assets/sprites/barrow.png" id="1_ajdkt"]
+[ext_resource type="Script" uid="uid://c2xxutix4kguq" path="res://scripts/barrow_talk_zone.gd" id="2_ajdkt"]
+[ext_resource type="Texture2D" uid="uid://c1pfkqqlfbr31" path="res://imgs/barr1.jpg" id="3_73uc3"]
+[ext_resource type="Texture2D" uid="uid://qe86fiwspg8r" path="res://imgs/barr2.jpg" id="4_2qfvs"]
+[ext_resource type="Texture2D" uid="uid://bsmiolure6uor" path="res://imgs/barr3.jpg" id="5_dpafq"]
+
+[sub_resource type="GDScript" id="GDScript_b0wga"]
+script/source = "extends Node2D
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ktcx"]
+atlas = ExtResource("1_ajdkt")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fi4v8"]
+atlas = ExtResource("1_ajdkt")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73uc3"]
+atlas = ExtResource("1_ajdkt")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qfvs"]
+atlas = ExtResource("1_ajdkt")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpafq"]
+atlas = ExtResource("1_ajdkt")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpcwh"]
+atlas = ExtResource("1_ajdkt")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbh5o"]
+atlas = ExtResource("1_ajdkt")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4140"]
+atlas = ExtResource("1_ajdkt")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4wui"]
+atlas = ExtResource("1_ajdkt")
+region = Rect2(768, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hctsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ktcx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fi4v8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73uc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qfvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpafq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpcwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbh5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4140")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4wui")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wakea"]
+size = Vector2(27, 109)
+
+[node name="Barrow" type="Node2D"]
+script = SubResource("GDScript_b0wga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -7)
+sprite_frames = SubResource("SpriteFrames_hctsb")
+autoplay = "default"
+frame_progress = 0.5631219
+flip_h = true
+
+[node name="BarrowTalkZone" type="Area2D" parent="AnimatedSprite2D"]
+collision_mask = 2
+script = ExtResource("2_ajdkt")
+npc_anim_path = NodePath("..")
+image_pages = Array[Texture2D]([ExtResource("3_73uc3"), ExtResource("4_2qfvs"), ExtResource("5_dpafq")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/BarrowTalkZone"]
+position = Vector2(-2.5, -46.5)
+shape = SubResource("RectangleShape2D_wakea")

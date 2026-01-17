@@ -1,0 +1,106 @@
+[gd_scene load_steps=19 format=3 uid="uid://pi5twv52ukw4"]
+
+[ext_resource type="Texture2D" uid="uid://wd7kebfl44lh" path="res://assets/sprites/gotfried.png" id="1_xld44"]
+[ext_resource type="Script" uid="uid://tlwydfpo00ew" path="res://scripts/johann_talkzone.gd" id="2_xld44"]
+[ext_resource type="Texture2D" uid="uid://bp5ocq5lhv0en" path="res://imgs/johan1.png" id="3_vopdq"]
+[ext_resource type="Texture2D" uid="uid://blvo5gtlo7c0o" path="res://imgs/johan2.webp" id="4_fxscs"]
+[ext_resource type="Texture2D" uid="uid://crmsv5sj4s320" path="res://imgs/johan3.png" id="5_amj21"]
+[ext_resource type="Texture2D" uid="uid://bf3unfj8xh072" path="res://imgs/johan4.png" id="6_ispbg"]
+
+[sub_resource type="GDScript" id="GDScript_b0wga"]
+script/source = "extends Node2D
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkyq6"]
+atlas = ExtResource("1_xld44")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1d7v"]
+atlas = ExtResource("1_xld44")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rl3mj"]
+atlas = ExtResource("1_xld44")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iassy"]
+atlas = ExtResource("1_xld44")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7ure"]
+atlas = ExtResource("1_xld44")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s35m"]
+atlas = ExtResource("1_xld44")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx62p"]
+atlas = ExtResource("1_xld44")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8iwqb"]
+atlas = ExtResource("1_xld44")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emnlf"]
+atlas = ExtResource("1_xld44")
+region = Rect2(768, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hctsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkyq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1d7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rl3mj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iassy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7ure")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s35m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx62p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8iwqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emnlf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wakea"]
+size = Vector2(27, 109)
+
+[node name="Johann Berno" type="Node2D"]
+script = SubResource("GDScript_b0wga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -7)
+sprite_frames = SubResource("SpriteFrames_hctsb")
+autoplay = "default"
+frame_progress = 0.95207006
+flip_h = true
+
+[node name="JohannTalkzone" type="Area2D" parent="AnimatedSprite2D"]
+collision_mask = 2
+script = ExtResource("2_xld44")
+npc_anim_path = NodePath("..")
+image_pages = Array[Texture2D]([ExtResource("3_vopdq"), ExtResource("4_fxscs"), ExtResource("5_amj21"), ExtResource("6_ispbg")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/JohannTalkzone"]
+position = Vector2(-2.5, -46.5)
+shape = SubResource("RectangleShape2D_wakea")
