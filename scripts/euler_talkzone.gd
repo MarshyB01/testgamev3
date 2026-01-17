@@ -36,7 +36,7 @@ an equation involving derivatives such as y', y'', and so on.
 
 EULER:
 For example, if the rate of change of a quantity depends on the quantity itself, you get equations like:
-y' = k y.
+y' = k * y.
 
 EULER:
 This leads to exponential growth or decay.
@@ -51,7 +51,7 @@ Second: power series.
 A power series rewrites a function as an infinite sum of powers:
 
 EULER:
-f(x) = a0 + a1 x + a2 x^2 + a3 x^3 + …
+f(x) = a0 + a1 * x + a2 * x^2 + a3 * x^3 + ...
 
 EULER:
 This is powerful because differentiation and integration become simple:
@@ -69,7 +69,7 @@ Third: unification of exponentials and trigonometry.
 One of the most important identities connected to my name is:
 
 EULER:
-e^(i x) = cos(x) + i sin(x).
+e^(i * x) = cos(x) + i * sin(x).
 
 EULER:
 This is not just a curiosity.

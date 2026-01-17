@@ -17,9 +17,9 @@ BARROW:
 My work matters here because I helped connect two problems that, for a long time, were treated as separate:
 
 BARROW:
-(1) the tangent problem — finding the slope of a curve at a point,
+(1) the tangent problem - finding the slope of a curve at a point,
 and
-(2) the area problem — finding the area under a curve.
+(2) the area problem - finding the area under a curve.
 
 BARROW:
 To explain the connection, suppose you start with a curve y = f(x).
@@ -28,25 +28,25 @@ BARROW:
 Now define a new quantity A(x): the area under f(x) from a fixed starting point up to x.
 
 BARROW:
-So A(x) is not a single number—it is a function of x, because the area grows as x increases.
+So A(x) is not a single number-it is a function of x, because the area grows as x increases.
 
 BARROW:
 Here is the key idea:
-if you increase x by a small amount, the area increases by a thin “strip.”
+if you increase x by a small amount, the area increases by a thin "strip."
 
 BARROW:
-That strip is approximately a rectangle with width Δx and height f(x).
+That strip is approximately a rectangle with width Delta x and height f(x).
 
 BARROW:
 So the change in area is approximately:
-ΔA ≈ f(x) · Δx
+DeltaA ~= f(x) * Delta x
 
 BARROW:
-If you divide both sides by Δx, you get:
-ΔA / Δx ≈ f(x)
+If you divide both sides by Delta x, you get:
+DeltaA / Delta x ~= f(x)
 
 BARROW:
-And if you make Δx smaller and smaller, this becomes an exact statement:
+And if you make Delta x smaller and smaller, this becomes an exact statement:
 the rate at which the area function A(x) changes is f(x).
 
 BARROW:
@@ -59,7 +59,7 @@ d/dx of the accumulated area under a curve gives back the original function.
 
 BARROW:
 The other direction is the inverse idea:
-if F'(x) = f(x), then the area under f from a to b equals F(b) − F(a).
+if F'(x) = f(x), then the area under f from a to b equals F(b) - F(a).
 
 BARROW:
 What I did was present this relationship clearly using geometry.

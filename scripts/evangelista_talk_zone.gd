@@ -14,10 +14,10 @@ TORRICELLI:
 Hello. I am Evangelista Torricelli.
 
 TORRICELLI:
-I worked on problems where geometry meets measurement—especially areas under curves and volumes of solids.
+I worked on problems where geometry meets measurement-especially areas under curves and volumes of solids.
 
 TORRICELLI:
-A major tool I used is the method of indivisibles, developed from Cavalieri’s ideas.
+A major tool I used is the method of indivisibles, developed from Cavalieri's ideas.
 The basic strategy is to treat a region as if it is built from infinitely many thin parallel pieces.
 
 TORRICELLI:
@@ -25,17 +25,16 @@ For a flat region (an area), imagine sweeping a horizontal line from bottom to t
 At each height y, the region has a cross-section: a line segment with some length, call it L(y).
 
 TORRICELLI:
-If you add the lengths of these cross-sections across all heights—carefully—you obtain the total area.
+If you add the lengths of these cross-sections across all heights-carefully-you obtain the total area.
 
 TORRICELLI:
 In modern language, this is the same structure as an integral:
-Area = “sum of slice lengths” over the full height.
+Area = "sum of slice lengths" over the full height.
 
 TORRICELLI:
 For a solid (a volume), the same idea applies.
 At each height y, the solid has a cross-section with some area, call it A(y).
 
-TORRICELLI:
 Adding those cross-sectional areas across the height gives the volume.
 
 TORRICELLI:
@@ -52,16 +51,17 @@ One example is the parabola.
 
 TORRICELLI:
 Archimedes had already found the area of a parabolic segment using classical geometry.
-I worked on additional approaches using indivisibles—showing how “slice-based” reasoning can reach the same result.
+I worked on additional approaches using indivisibles-showing how "slice-based" reasoning can reach the same result.
 
 TORRICELLI:
 I also examined infinite sums more directly.
-If you have a sequence of numbers a0, a1, a2, … that decreases and approaches a limit L,
+If you have a sequence of numbers a0, a1, a2, ... that decreases and approaches a limit L,
 then the telescoping series
 
 TORRICELLI:
-(a0 − a1) + (a1 − a2) + (a2 − a3) + …
-adds up to a0 − L.
+(a0 - a1) + (a1 - a2) + (a2 - a3) + ...
+
+adds up to a0 - L.
 
 TORRICELLI:
 That may look simple, but it is powerful:
@@ -72,23 +72,23 @@ It is another example of controlling an infinite process with precise reasoning.
 
 TORRICELLI:
 Finally, I studied a solid that forces you to think carefully about infinity.
-Take the curve y = 1/x for x ≥ 1 and revolve it around the x-axis.
+Take the curve y = 1/x for x >= 1 and revolve it around the x-axis.
 
 TORRICELLI:
 The solid extends without end, yet its volume is finite.
 
 TORRICELLI:
 At the same time, the surface area grows without bound.
-So the same object can have a finite “amount of space inside” but an infinite “amount of surface.”
+So the same object can have a finite "amount of space inside" but an infinite "amount of surface."
 
 TORRICELLI:
-This result matters because it shows why you must define measurement methods carefully—especially when infinity is involved.
+This result matters because it shows why you must define measurement methods carefully-especially when infinity is involved.
 
 TORRICELLI:
 So, if you summarize my contribution to the development toward calculus, it is this:
 
 TORRICELLI:
-I helped move geometry toward a method-based approach—
+I helped move geometry toward a method-based approach-
 measuring curves and solids by slicing, summing, and controlling infinite processes.
 """
 

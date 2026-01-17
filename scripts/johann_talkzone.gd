@@ -14,7 +14,7 @@ BERNOULLI:
 Hello. I am Johann Bernoulli.
 
 BERNOULLI:
-I worked on developing and applying the new methods of calculus, especially to problems where you must find a “best” answer:
+I worked on developing and applying the new methods of calculus, especially to problems where you must find a "best" answer:
 the fastest, the shortest, the greatest, the least.
 
 BERNOULLI:
@@ -22,12 +22,12 @@ One of my most famous problems is called the brachistochrone problem.
 It asks this:
 
 BERNOULLI:
-Given two points at different heights, what curve should a bead follow—under gravity, with no friction—
+Given two points at different heights, what curve should a bead follow-under gravity, with no friction-
 so that it reaches the lower point in the least time?
 
 BERNOULLI:
 Many people assume the straight line is fastest.
-But “shortest distance” is not the same as “least time.”
+But "shortest distance" is not the same as "least time."
 
 BERNOULLI:
 To see why, focus on speed.
@@ -40,7 +40,9 @@ Over a very small piece of the curve, the time taken is approximately
 
 BERNOULLI:
 dt = ds / v,
-where ds is a small length of the path and v is the bead’s speed on that piece.
+
+BERNOULLI:
+where ds is a small length of the path and v is the bead's speed on that piece.
 
 BERNOULLI:
 So the total travel time is built by adding up ds / v along the entire curve.
@@ -54,11 +56,11 @@ A curve that drops steeply at the beginning can be faster overall, even if it is
 
 BERNOULLI:
 This problem is important because it is not about maximizing or minimizing at a single point.
-It is about choosing an entire curve—the whole path—so that the total time is as small as possible.
+It is about choosing an entire curve-the whole path-so that the total time is as small as possible.
 
 BERNOULLI:
 That idea leads to what later becomes the calculus of variations:
-optimization where the “unknown” is a function or a curve, not just a number.
+optimization where the "unknown" is a function or a curve, not just a number.
 
 BERNOULLI:
 The surprising answer is that the fastest curve is a cycloid,
@@ -72,7 +74,7 @@ I shared this problem publicly as a challenge, because it forced mathematicians 
 but a powerful method for solving real optimization problems.
 
 BERNOULLI:
-Beyond that, I worked extensively with differential equations—equations involving derivatives—
+Beyond that, I worked extensively with differential equations-equations involving derivatives-
 because they describe change directly.
 
 BERNOULLI:

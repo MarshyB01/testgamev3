@@ -15,7 +15,7 @@ Hello. I am Gottfried Wilhelm Leibniz.
 
 LEIBNIZ:
 My contribution to calculus was developing a clear, systematic way to work with rates of change and accumulated quantities,
-and—just as importantly—creating notation that made these ideas easier to communicate and use.
+and-just as importantly-creating notation that made these ideas easier to communicate and use.
 
 LEIBNIZ:
 There are two central problems.
@@ -48,14 +48,14 @@ For example, if y depends on x, then dy tells you how y responds to a small chan
 The derivative dy/dx summarizes that local behavior.
 
 LEIBNIZ:
-To handle the area problem, I introduced the integral sign ∫.
+To handle the area problem, I introduced the integral sign.
 It represents summing many small pieces.
 
 LEIBNIZ:
 You can imagine splitting an interval into tiny widths dx, building thin rectangles with height f(x), and adding them.
 
 LEIBNIZ:
-So ∫ f(x) dx means:
+So integral of f(x) dx means:
 take the function f(x), multiply by an infinitesimal width dx, and sum across the interval.
 
 LEIBNIZ:
@@ -67,10 +67,10 @@ Integration rebuilds a quantity from those local changes.
 
 LEIBNIZ:
 In other words:
-if F'(x) = f(x), then ∫ f(x) dx = F(x) + C.
+if F'(x) = f(x), then integral of f(x) dx = F(x) + C.
 
 LEIBNIZ:
-And for a definite interval, the accumulated total is F(b) − F(a).
+And for a definite interval, the accumulated total is F(b) - F(a).
 
 LEIBNIZ:
 This relationship turns many geometry and physics problems into an organized procedure:
@@ -84,7 +84,7 @@ LEIBNIZ:
 My notation made calculus portable.
 
 LEIBNIZ:
-The symbols dx, dy, dy/dx, and ∫ are compact, consistent, and easy to apply across many problems.
+The symbols dx, dy, dy/dx, and the integral sign are compact, consistent, and easy to apply across many problems.
 Because of that, calculus could spread, be taught, and be extended much more rapidly.
 
 """

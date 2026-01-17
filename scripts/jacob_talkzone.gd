@@ -11,15 +11,15 @@ extends Area2D
 ...
 
 JAKOB BERNOULLI:
-Hello. I am Jakob Bernoulli—sometimes written as Jacob Bernoulli.
+Hello. I am Jakob Bernoulli-sometimes written as Jacob Bernoulli.
 
 JAKOB BERNOULLI:
 I worked in Basel, and I was part of the generation that helped develop calculus after Newton and Leibniz.
 My work focused on making calculus more systematic, especially in two areas: series/summation methods and differential equations.
 
 JAKOB BERNOULLI:
-First, I studied patterns in sums—especially sums of powers:
-1^p + 2^p + 3^p + … + n^p.
+First, I studied patterns in sums-especially sums of powers:
+1^p + 2^p + 3^p + ... + n^p.
 
 JAKOB BERNOULLI:
 These sums appear naturally when you approximate area using rectangles.
@@ -34,14 +34,14 @@ They appear as constant coefficients that repeatedly show up when you write gene
 
 JAKOB BERNOULLI:
 For example, there are closed forms such as:
-1 + 2 + … + n = n(n+1)/2,
+1 + 2 + ... + n = n(n+1)/2,
 
 JAKOB BERNOULLI:
-and
-1^2 + 2^2 + … + n^2 = n(n+1)(2n+1)/6.
+and 1^2 + 2^2 + ... + n^2 = n(n+1)(2n+1)/6.
 
 JAKOB BERNOULLI:
 As the power increases, the formulas become more complicated.
+
 Bernoulli numbers provide a structured way to build those formulas rather than re-deriving each one from scratch.
 
 JAKOB BERNOULLI:
@@ -68,20 +68,21 @@ which often reflects a physical or geometric rule.
 
 JAKOB BERNOULLI:
 A well-known example connected to my name is the logarithmic spiral, sometimes called the spira mirabilis.
-It is a curve that keeps the same shape as it grows—its geometry repeats under scaling.
+It is a curve that keeps the same shape as it grows-its geometry repeats under scaling.
 
 JAKOB BERNOULLI:
-It can be described by an equation of the form r = a·e^(bθ),
+It can be described by an equation of the form r = a * e^(b * theta),
 and it has clean relationships between angles and tangents.
 
 JAKOB BERNOULLI:
 Overall, my contribution to calculus is this:
-I helped turn calculus into a more organized toolkit—
-with reliable summation formulas (supported by Bernoulli numbers),
+I helped turn calculus into a more organized toolkit-
 
 JAKOB BERNOULLI:
+with reliable summation formulas (supported by Bernoulli numbers),
 series methods for computation and approximation,
 and differential-equation thinking for describing curves and change.
+
 """
 
 # Assign PNGs here in the Inspector (per NPC)

@@ -43,7 +43,7 @@ If, at every height, the length of the segment inside Shape A equals the length 
 then the total areas of the two shapes are equal.
 
 CAVALIERI:
-In other words, if the “slice length” matches for every level, then the full area must match.
+In other words, if the "slice length" matches for every level, then the full area must match.
 
 CAVALIERI:
 The same idea works for volume.

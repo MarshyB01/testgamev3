@@ -15,7 +15,7 @@ Greetings. I am Johannes Kepler.
 
 KEPLER:
 My work is mainly about understanding motion in the heavens and making accurate predictions.
-To do that, I relied on careful observation data—especially the measurements collected by Tycho Brahe.
+To do that, I relied on careful observation data-especially the measurements collected by Tycho Brahe.
 
 KEPLER:
 The first major conclusion I reached is that planets do not move in perfect circles.
@@ -26,7 +26,7 @@ Second, I found a rule that connects motion and area:
 a planet sweeps out equal areas in equal intervals of time.
 
 KEPLER:
-In other words, if you pick any two time periods of the same length, the “sector area” traced out by the line from the Sun to the planet will be the same.
+In other words, if you pick any two time periods of the same length, the "sector area" traced out by the line from the Sun to the planet will be the same.
 
 KEPLER:
 This idea matters because it links time to accumulation.
@@ -53,11 +53,11 @@ Imagine cutting the barrel into a stack of very thin circular layers.
 
 KEPLER:
 Each layer behaves like a short cylinder: its volume is approximately
-(area of the circle) × (thickness of the slice).
+(area of the circle) * (thickness of the slice).
 
 KEPLER:
-If you add the volumes of all the slices, you get an approximation of the barrel’s total volume.
-And the more slices you use—the thinner you make them—the better the approximation becomes.
+If you add the volumes of all the slices, you get an approximation of the barrel's total volume.
+And the more slices you use-the thinner you make them-the better the approximation becomes.
 
 KEPLER:
 This is important because it is the same general idea behind integration:
@@ -73,6 +73,7 @@ It is the consistent use of measurable rules and approximations:
 KEPLER:
 elliptical motion described by area over time,
 and volume measured by summing many thin cross-sections.
+
 """
 
 # Assign PNGs here in the Inspector (per NPC)

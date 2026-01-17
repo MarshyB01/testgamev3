@@ -18,7 +18,7 @@ My work connects calculus to motion and change.
 I was interested in how quantities vary over time: position, velocity, acceleration, and more general changing quantities.
 
 NEWTON:
-I describe changing quantities as fluents—values that “flow” as time passes.
+I describe changing quantities as fluents-values that "flow" as time passes.
 The rates at which they change are fluxions.
 
 NEWTON:
@@ -52,7 +52,7 @@ This is why I saw differentiation and integration as inverse operations.
 If you differentiate a quantity, you get its fluxion.
 
 NEWTON:
-If you “undo” that process, you recover the fluent.
+If you "undo" that process, you recover the fluent.
 
 NEWTON:
 In my writing, I called this inverse process the method of quadratures.
@@ -60,9 +60,9 @@ It corresponds to finding areas, accumulated quantities, and antiderivatives.
 
 NEWTON:
 A simple example is this:
-	
-	NEWTON:
-if a quantity grows at a rate proportional to x^n, then the accumulated quantity involves x^(n+1).
+
+NEWTON:
+If a quantity grows at a rate proportional to x^n, then the accumulated quantity involves x^(n+1).
 This produces the pattern that later becomes the power rule.
 
 NEWTON:
@@ -77,6 +77,7 @@ NEWTON:
 So my contribution to calculus is a complete framework:
 rates of change (fluxions),
 relationships between rates (slopes and tangents),
+and the reverse process of accumulation through quadratures.
 
 NEWTON:
 and recovering quantities from rates (quadratures),

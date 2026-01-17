@@ -14,7 +14,7 @@ MADHAVA:
 Welcome. I am Madhava of Sangamagrama, from the Kerala school of astronomy and mathematics.
 
 MADHAVA:
-My work is focused on calculation—especially what astronomy demands: accurate angles, arc lengths, and reliable numerical methods.
+My work is focused on calculation-especially what astronomy demands: accurate angles, arc lengths, and reliable numerical methods.
 
 MADHAVA:
 Sine, cosine, and arctangent are essential for astronomy, but they are not easy to compute directly for many angles.
@@ -33,52 +33,56 @@ Start with something simple: a small angle measured in radians.
 For small angles, sine behaves almost like the angle itself.
 
 MADHAVA:
-That is why the first term for sine is just 0.
+That is why the first term for sine is just theta.
 
 MADHAVA:
-But sine is not exactly 0, so we need a correction.
+But sine is not exactly theta, so we need a correction.
 
 MADHAVA:
-The next correction depends on 0^3, because the sine curve bends away from a straight line in a symmetric way.
+The next correction depends on theta^3, because the sine curve bends away from a straight line in a symmetric way.
 
 MADHAVA:
-That correction is subtracted: 0 − (0^3 / 3!).
+That correction is subtracted: theta - (theta^3 / 3!).
 
 MADHAVA:
 Even that is still not perfect.
-So we add a smaller correction that depends on 0^5, then subtract an even smaller correction with 0^7, and so on.
+So we add a smaller correction that depends on theta^5, then subtract an even smaller correction with theta^7, and so on.
 
 MADHAVA:
 This creates a repeating pattern: alternating signs, odd powers, and factorials in the denominators.
 
 MADHAVA:
 So the structure for sine looks like this:
-0 − 0^3/3! + 0^5/5! − 0^7/7! + …
+
+MADHAVA:
+theta - (theta^3 / 3!) + (theta^5 / 5!) - (theta^7 / 7!) + ...
 
 MADHAVA:
 Cosine follows the same logic, but cosine starts near 1 when the angle is small.
-So its first term is 1, and then it decreases with a 0^2 correction:
+The first term is 1, and then it decreases with a theta^2 correction:
 
 MADHAVA:
-1 − 0^2/2! + 0^4/4! − 0^6/6! + …
+1 - (theta^2 / 2!) + (theta^4 / 4!) - (theta^6 / 6!) + ...
 
 MADHAVA:
 These are infinite series: they have no final term.
 But for practical computation, you do not need every term.
 
 MADHAVA:
-Each new term is smaller than the previous one once 0 is not too large, so the sum settles toward a stable value.
+Each new term is smaller than the previous one once theta is not too large, so the sum settles toward a stable value.
 
 MADHAVA:
 Arctangent can also be rewritten into an infinite series.
 
 MADHAVA:
 One useful form is built from a repeating odd-power pattern:
-x − x^3/3 + x^5/5 − x^7/7 + …
 
 MADHAVA:
-This matters because arctan(1) equals π/4.
-So, if you can compute arctan(1) accurately, you can compute π.
+x - (x^3 / 3) + (x^5 / 5) - (x^7 / 7) + ...
+
+MADHAVA:
+This matters because arctan(1) equals pi/4.
+So, if you can compute arctan(1) accurately, you can compute pi.
 
 MADHAVA:
 However, there is an important practical issue.
